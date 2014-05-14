@@ -17,9 +17,9 @@
 			<div class="step 1" data-x="0" data-y="0">
 				<img src="images/ColdBoxLogoSquare_125.png" class="pull-right">
 				<h2 style="clear:both;" class="itb">REST APIs</h2>
-				<u class="gold">RE</u>presentational <u class="gold">S</u>tate<u class="gold">T</u>ransfer
+				<span class="gray"><u class="gold">RE</u>presentational <u class="gold">S</u>tate<u class="gold">T</u>ransfer
 				 of an<br>
-				<u class="gold">A</u>pplication <u class="gold">P</u>rogramming <u class="gold">I</u>nterface
+				<u class="gold">A</u>pplication <u class="gold">P</u>rogramming <u class="gold">I</u>nterface</span>
 			</div>
 
 			<div class="step 2" data-x="-1500" data-y="0">
@@ -89,7 +89,6 @@
 
 			<div class="step 12" data-x="-4000" data-y="-2000">
 				<img src="images/Olaf_Beach_Image.jpg">
-				<!-- <h5 class="gold">and let off some STEAM</h5> -->
 			</div>
 
 			<div class="step 13" data-x="-4000" data-y="-4000" data-rotate="-90">
@@ -159,23 +158,23 @@
 
 			<div class="step 21" data-x="4000" data-y="4000" data-z="2000">
 				<h5 class="itb">Example routes</h5>
-				<span class="gold">List players?</span><br>
-				(baseURL)/api/player/list<br>
-				<span class="gold">Get a player?</span> <span class="brown">(http verb GET)</span><br>
-				(baseURL)/api/player/:playerID<br>
-				<span class="gold">Make a player?</span> <span class="brown">(http verb POST)</span><br>
-				(baseURL)/api/player/:playerID</span>
+				<p class="gold">List players?</p>
+				<p class="gray">(baseURL)/api/player/list</p>
+				<p class="gold">Get a player?</span> <span class="brown"><span class="dwarf">(http verb GET)</span></p>
+				<p class="gray">(baseURL)/api/player/:playerID</p>
+				<p class="gold">Make a player?</span> <span class="brown"><span class="dwarf">(http verb POST)</span></p>
+				<p class="gray">(baseURL)/api/player/:playerID</p>
 			</div>
 
 			<div class="step 22" data-x="2000" data-y="4000">
 				<h5 class="itb">Returning data</h5>
-				"The most common way to return data from your handler's action is to use the even object's <span class="standout">renderData()</span> method. It takes complex data and turns it into a string representation"<br>
-				<span class="gold" style="float:right">- ColdBox docs</span>
+				<p class="gray">"The most common way to return data from your handler's action is to use the even object's <span class="standout">renderData()</span> method. It takes complex data and turns it into a string representation"</p>
+				<span class="gold" style="float:right">- <img src="images/coldbox_200.png" style="position:relative; top:15px"> docs</span>
 			</div>
 
 			<div class="step 23" data-x="0" data-y="4000" data-z="-2000">
 				<h5 class="itb">Return data formats</h5>
-				<ul style="list-style-type:circle">
+				<ul style="list-style-type:circle" class="gray">
 					<li>XML</li>
 					<li>JSON</li>
 					<li>TEXT</li>
@@ -187,13 +186,14 @@
 
 			<div class="step 24" data-x="-2000" data-y="4000">
 				<h5 class="itb">Setting up a return</h5>
+				<br>
 				<img src="images/sampleGetPlayer.png">
 			</div>
 
 			<div class="step 25" data-x="-4000" data-y="4000" data-rotate="360" data-z="2000">
 				<h5 class="itb">Well, that was  <img src="images/easyButton.png" style="position: relative; top:100px; margin-left:30px;"></h5>
 				<br>
-				<h4 class="gold" style="margin-left:80px">Wasn't it?</h4>
+				<h4 class="gold" style="margin-left:150px">Wasn't it?</h4>
 			</div>
 
 			<div class="step 26" data-x="-6000" data-y="4000" data-rotate="360">
@@ -211,16 +211,58 @@
 			<div class="step 28" data-x="-6000" data-y="0" data-rotate="360">
 				<h5 class="itb">Beyond "bare bones"</h5>
 				<ul style="list-style-type:circle">
-					<li>Status Codes</li>
-					<li>Caching</li>
-					<li>Security</li>
-					<li>Restricting HTTP Verbs</li>
-					<li>Error Handling</li>
-					<li>Relax</li>
+					<li class="brown">Status Codes</li>
+					<li class="gray">Caching</li>
+					<li class="gray">Security</li>
+					<li class="brown">Restricting HTTP Verbs</li>
+					<li class="gray">Error Handling</li>
+					<li class="brown">Relax</li>
 				</ul>
 			</div>
 
 			<div class="step 29" data-x="-6000" data-y="-2000" data-rotate="360" data-z="2000">
+				<h5 class="itb">Status Codes</h5>
+				<ul style="list-style-type:circle">
+					<li><span class="gold">200</span> "OK"</li>
+					<li><span class="gold">202</span> "Created"</li>
+					<li><span class="gold">400</span> "Bad Request"</li>
+					<li><span class="standout">401</span> "Unauthorized"</li>
+					<li><span class="standout">404</span> "Not Found"</li>
+					<li><span class="standout">500</span> "Server Error"</li>
+				</ul>
+			</div>
+
+			<div class="step 30" data-x="-6000" data-y="-4000" data-rotate="360">
+				<h5 class="itb">Using Status Codes</h5>
+				<span class="gold">1. event.renderData()</span> <span class="dwarf">(shortcut)</span>
+				<ul style="list-style-type:circle">
+					<li>statusCode & statusMessage attr</li>
+				</ul>
+				<span class="gold">2. event.setHTTPHeader()</span> <span class="dwarf">(manual)</span>
+				<ul style="list-style-type:circle">
+					<li>statusCode & statusText attr</li>
+				</ul>
+				<img src="images/statusCodes.png">
+			</div>
+
+			<div class="step 31" data-x="-6000" data-y="-6000" data-rotate="360" data-z="-2000">
+				<h5 class="itb">Restricting HTTP verbs</h5>
+				in our routes, we mapped HTTP verbs to handler actions, but how can we prevent users from hitting resources w/the <span class="standout">wrong</span> verbs? (aka a GET to a delete function)
+			</div>
+
+			<div class="step 32" data-x="-4000" data-y="-6000" data-rotate="90">
+				<h5 class="itb">this.allowedMethods</h5>
+				allowedMethods property in handler can restrict those connections for us
+				<img src="images/allowedMethods.png">
+			</div>
+
+			<div class="step 33" data-x="-2000" data-y="-6000" data-rotate="180" data-z="2000">
+				<h3 class="itb">and now...</h3>
+				<br>
+				<h1 class="itb" style="float:right">RELAX!!!</h1>
+			</div>
+
+			<div class="step 34" data-x="0" data-y="-6000" data-rotate="270">
 				<h5 class="itb">Resources</h5>
 				<ul>
 					<li><span class="gold">Coldbox REST docs</span>
@@ -241,13 +283,9 @@
 				</ul>
 			</div>
 
-			<div class="step 30" data-x="-6000" data-y="-4000" data-rotate="360">
-				<h1>THIRTY (30)</h1>
-			</div>
+			<!-- <div class="step 35" data-x="2000" data-y="-6000" data-rotate="360" data-z="-2000">
 
-			<div class="step 31" data-x="-6000" data-y="-6000" data-rotate="360" data-z="-2000">
-				<h1>THIRTY ONE (31)</h1>
-			</div>
+			</div> -->
 
 			<div id="overview" class="step" data-x="0" data-y="0" data-scale="10"></div>
 

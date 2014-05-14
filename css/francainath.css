@@ -15,9 +15,13 @@
 }
 
 .gray {
-	color:lightgray;
+	color:#B8B8B8;
 }
 
 .brown {
 	color:#E89B0C;
+}
+
+.dwarf {
+	font-size: .75em;
 }
