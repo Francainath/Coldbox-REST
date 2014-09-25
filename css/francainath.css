@@ -3,9 +3,25 @@
 }
 
 .standout {
-	color: #990000;
+	color: #FF0000;
 }
 
-.golden {
+.gold {
 	color:#FFCC00;
+}
+
+.itb {
+	color:#8fc73e;
+}
+
+.gray {
+	color:#B8B8B8;
+}
+
+.brown {
+	color:#E89B0C;
+}
+
+.dwarf {
+	font-size: .75em;
 }
