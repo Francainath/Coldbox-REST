@@ -27,6 +27,20 @@ component {
 
 
 
+event.renderData( type="JSON", data=player, statusCode=201, statusMessage="Player created" );
+
+event.setHTTPHeader( statusCode=201, statusText="Player created" );
 
 
 
+
+
+
+
+this.allowedMethods = {
+	list = "GET",
+	get = "GET",
+	save = "POST",
+	delete = "DELETE",
+	getPlayersJerseyNumbers = "GET,OPTIONS"
+};
